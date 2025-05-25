@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from src.api.category_routes import router as category_router
 from src.api.payment_methods_routes import router as payment_methods_router
 from src.api.expenses_routes import router as expenses_router
+from src.api.graph_expense_route import router as graph_expense_router
 from dotenv import load_dotenv
 import os
 
@@ -15,3 +16,5 @@ app = FastAPI(
 app.include_router(category_router)
 app.include_router(payment_methods_router)
 app.include_router(expenses_router)
+app.include_router(graph_expense_router)
+
